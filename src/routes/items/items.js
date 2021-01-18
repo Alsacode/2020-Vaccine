@@ -1,4 +1,4 @@
-import Item from '../item';
+import Item from '../../components/item';
 import { FloatingButton, ButtonContainer } from '../../shared/uibuttons';
 
 
