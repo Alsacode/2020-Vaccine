@@ -1,0 +1,11 @@
+@import '../../assets/styles/_config.scss';
+
+.menu {
+    background-color: $menu-background;
+    color: $menu-text;
+    max-height: $menu-height;
+    min-height: $menu-height;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

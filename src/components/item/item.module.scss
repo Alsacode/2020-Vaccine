@@ -1,7 +1,10 @@
+@import '../../assets/styles/_config.scss'; 
+
+
 .item {
     display: flex;
-    border-bottom:  1px solid #696969;
-    color: #999;
+    border-bottom:  1px solid  $item-border;
+    color: $item-text;
 }
 
 
@@ -9,7 +12,7 @@
     flex: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0.75rem;
+    padding: $item-padding;
 }
 
 .item_date, .item_death, .item_bad {
@@ -18,5 +21,20 @@
 
 .item_type, .item_date {
     font-weight: bold;
-    color: #000;
+    color: $item-text-strong;
+}
+
+.item_edit {
+    max-width: $item-edit-width;
+    min-width: $item-edit-width;
+    background-color: $item-edit-background;
+    color: $item-edit-text;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.item:hover .item_edit {
+    display: flex;
 }
