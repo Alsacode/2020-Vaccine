@@ -11,7 +11,7 @@ function Items(props) {
            <Item />
            <Item />
            <Item />
-           <Button>Learn more</Button>
+           <Button  >Learn more</Button>
        </div>
    );
 

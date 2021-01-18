@@ -15,3 +15,29 @@
     border-color: #494949 !important;
     transition: 0.3s ease 0s;
 }
+
+.uibuttons--primary {
+    background-color:  #d9ffff;
+    
+}
+
+
+.uibuttons--primary:hover {
+    background-color:  	  #ffe8e8;
+}
+
+
+.uibuttons--secondary {
+    background-color:    #b2cc80;
+}
+
+
+.uibuttons--secondary:hover {
+  background-color:     #d9d90f;
+}
+
+.uibuttons:disabled {
+    background-color: #ccc;
+    color: #999;
+    box-shadow: none;
+}
