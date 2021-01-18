@@ -7,6 +7,10 @@
     border-radius: 6px;
     display: inline-block;
     transition: all 0.3s ease 0s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .uibuttons:hover {
@@ -40,4 +44,24 @@
     background-color: #ccc;
     color: #999;
     box-shadow: none;
+}
+
+.uibuttons--floating {
+    position: fixed;
+    bottom: 6rem;
+    right: 1rem;
+    border-radius: 50%;
+    font-size: 2.5em;
+    width: 1.5em;
+    height: 1.5em;
+    padding: 0.6em;
+}
+
+
+.uibutton__container {
+    position: relative;
+}
+
+.uibutton__appcontainer > div {
+    transform: translateZ(0);
 }
