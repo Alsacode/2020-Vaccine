@@ -1,5 +1,5 @@
 import Item from '../item';
-
+import Button from '../../shared/uibuttons';
 
 
 function Items(props) {
@@ -11,6 +11,7 @@ function Items(props) {
            <Item />
            <Item />
            <Item />
+           <Button>Learn more</Button>
        </div>
    );
 
