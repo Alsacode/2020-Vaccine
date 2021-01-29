@@ -15,11 +15,11 @@
     padding: $item-padding;
 }
 
-.item_date, .item_death, .item_bad {
+.item_amount, .item_averagePrice, .item_orderDate {
     text-align: right;
 }
 
-.item_type, .item_date {
+.item_date, .item_type, .item_amount {
     font-weight: bold;
     color: $item-text-strong;
 }
