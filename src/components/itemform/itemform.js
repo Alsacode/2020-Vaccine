@@ -22,7 +22,7 @@ function ItemForm(props) {
 
                 <div>
                  <label htmlFor="amount">Amount</label>
-                 <input type="number" name="amount" step="0.01" /> 
+                 <input type="number" name="amount" step="1" /> 
 
                 </div>    
                 <div>
