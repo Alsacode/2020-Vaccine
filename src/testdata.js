@@ -6,7 +6,7 @@ const data = [
       startDate: "2020-03-01",
       orderDate: "2020-11-18",
       arriveDate: "2021-2-02",
-      receiver:       "Moderna"
+      receiver:   "Moderna"
     },
     {
       id:        "2",

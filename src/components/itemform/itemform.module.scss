@@ -1,0 +1,33 @@
+@import '../../assets/styles/_config.scss';
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_row {
+    display: flex;
+}
+
+.form_row > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    width: 100%;
+    margin: $form-item-margin;
+}
+
+.form input, .form select {
+    padding: $form-item-padding;
+    border: 1px solid $form-input-border;
+    border-radius: $form-item-radius;
+    font-size: $form-item-fontsize;
+    outline: none;
+}
+
+
+.form label {
+   font-size: $form-label-fontsize;
+   margin-bottom: $form-label-margin-bottom;
+
+}

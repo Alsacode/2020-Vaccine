@@ -5,6 +5,7 @@ import Content from '../content';
 import Items from '../../routes/items';
 import Stats from '../../routes/stats';
 import Settings from '../../routes/settings';
+import Additem from '../../routes/additem';
 import Menu from '../menu';
 import { ButtonAppcontainer } from '../../shared/uibuttons';
 import testdata from '../../testdata.js';
@@ -23,6 +24,9 @@ function App() {
            </Route>
            <Route path="/settings">
              <Settings />
+           </Route>
+           <Route path="/add">
+             <Additem />
            </Route>
          </Content>
        <Menu />
