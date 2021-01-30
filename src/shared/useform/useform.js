@@ -28,7 +28,7 @@ const useForm = (callback, initialState={}, resetOnSubmit=true) => {
 
     }
         // Function, what help the lomakkee info for reseting
-        const resetValues = () {
+        const resetValues = () => {
             setValues(initialState);
         }
 
@@ -40,7 +40,7 @@ const useForm = (callback, initialState={}, resetOnSubmit=true) => {
             resetValues,
             setValues,
             values
-        };
+        }; 
 
 }
 
