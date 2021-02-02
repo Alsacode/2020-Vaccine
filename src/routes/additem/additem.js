@@ -5,7 +5,7 @@ function Additem(props) {
     return (
         <div className={styles.additem}>
             <h2>Add new stuff</h2>
-            <ItemForm />
+            <ItemForm onItemSubmit={props.onItemSubmit} types={props.types} />
         </div>
     );
 }

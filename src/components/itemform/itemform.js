@@ -2,19 +2,21 @@ import styles from './itemform.module.scss';
 import Button from '../../shared/uibuttons';
 import useForm from '../../shared/useform';
 import { useHistory } from 'react-router-dom';
-
-
+import { v4 as uuidv4 } from 'uuid';
 function ItemForm(props) {
 
   const history = useHistory();  
 
  const submit = () => {
-     alert("SUBMIT!");
+     let storedvalues = Object.assign({}, values);
+     storedvalues.amount = parseFloat(storedvalues.amount);
+     storedvalues.id = storedvalues.id ? storedvalues.id : uuidv4();
+     props.onItemSubmit(storedvalues);
      history.push("/");
 
  }
 
- const initialState = {
+ const initialState = props.data ? props.data : { 
      type: "",
      amount: 0,
      startDate: "",
@@ -23,13 +25,19 @@ function ItemForm(props) {
      receiver: ""
  };
 
+
     const { values, handleChange, handleSubmit} = useForm(submit, initialState, false); 
      
     const handleCancel = (event) => {
         event.preventDefault();
         history.goBack();
     }
-
+ 
+    const handleDelete = (event) => {
+       event.preventDefault();
+       props.onItemDelete(values.id);
+       history.push("/");
+    }
 
     return(
          <div>
@@ -38,13 +46,11 @@ function ItemForm(props) {
                 
              <div className={styles.form_row}>
                 <div>
+
                     <label htmlFor="type">Vaccine option's</label>
                     <select name="type" onChange={handleChange} value={values.type}>
-                        <option>Moderna</option>
-                        <option>Oxford-AstraZeneca</option>
-                        <option>Pfize/BioNTech</option>
-                        <option>Novavax</option>
-                        <option>Sanofi/GSK</option>
+                    { props.types.map( (type) =>  <option key={type} value={type}>{type}</option>  )} 
+                       
                     </select>
                 </div>
              </div>
@@ -56,7 +62,7 @@ function ItemForm(props) {
 
                 </div>    
                 <div>
-                 <label htmlFor="startDate">Delivery Date</label>
+                 <label htmlFor="startDate">Order Date</label>
                  <input type="date" name="startDate" onChange={handleChange} value={values.startDate} /> 
 
                 </div>               
@@ -64,7 +70,7 @@ function ItemForm(props) {
                <div className={styles.form_row}>
 
                 <div>
-                 <label htmlFor="orderDate">Order Date</label>
+                 <label htmlFor="orderDate">Delivery Date</label>
                  <input type="date" name="orderDate" onChange={handleChange} value={values.orderDate}  /> 
 
                 </div>    
@@ -86,14 +92,23 @@ function ItemForm(props) {
             
              <div className={styles.form_row}>
                 <div>
-                    <Button  onClick={handleCancel}>Cancel</Button>
+                    <Button primary  onClick={handleCancel}>CANCEL</Button>
 
                 </div>
                 <div>
-                    <Button primary type="submit">Add</Button>
+                    <Button primary type="submit">{ props.data ? "SAVE" : "ADD"}</Button>
 
                 </div>
              </div>
+
+
+             {props.onItemDelete ? 
+               <div className={styles.form_row}>
+                <div>
+                     <Button primary  onClick={handleDelete}>Remove</Button>
+                       </div>
+                    <div></div>
+                 </div> : "" }
 
 
                 </div>    

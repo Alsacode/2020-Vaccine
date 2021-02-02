@@ -1,0 +1,61 @@
+@import '../../assets/styles/_config.scss';
+
+
+.settings {
+    padding: $container-padding;
+}
+
+.settings h3 {
+  margin-top: 0.5rem;  
+}
+
+.settings_types {
+    padding: 0.4rem;
+    font-size: 1.2rem;
+}
+
+.settings_types > div {
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+}
+
+.settings_types > div:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.settings p strong {
+    color: rgb(0, 0, 0);
+}
+
+.settings p {
+    width: auto;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: none;
+   
+
+}
+
+.settings ul li p cite {
+    color: rgb(58, 58, 251);
+}
+
+.settings p cite {
+    color: rgb(58, 58, 251);   
+}
+
+.typeform {
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+
+.typeform input {
+    flex: 1 1 auto;
+    padding: $form-item-padding;
+    border:  1px solid $form-input-border;
+    border-radius: $form-item-radius;
+    font-size: 1em;
+    outline: none;
+}

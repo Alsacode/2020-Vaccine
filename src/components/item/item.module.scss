@@ -35,6 +35,11 @@
 
 }
 
+
+.item_edit a {
+    color: $item-edit-text;
+}
+
 .item:hover .item_edit {
     display: flex;
 }
