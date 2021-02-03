@@ -65,7 +65,7 @@ function App() {
              <Items data={data} />
            </Route>
            <Route path="/stats">
-             <Stats />
+             <Stats data={data}/>
            </Route>
            <Route path="/settings">
              <Settings types={typelist} onTypeSubmit={handleTypeSubmit} />

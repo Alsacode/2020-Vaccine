@@ -3,7 +3,8 @@ import Button from '../../shared/uibuttons';
 import useForm from '../../shared/useform';
 import { useHistory } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
-function ItemForm(props) {
+
+ function ItemForm(props) {
 
   const history = useHistory();  
 
@@ -17,9 +18,9 @@ function ItemForm(props) {
  }
 
  const initialState = props.data ? props.data : { 
-     type: "",
+     type: props.types ? props.types[0] : "",
      amount: 0,
-     startDate: "",
+     startDate: new Date().toISOString().substring(0,10),
      orderDate: "",
      arriveDate: "",
      receiver: ""
@@ -48,7 +49,7 @@ function ItemForm(props) {
                 <div>
 
                     <label htmlFor="type">Vaccine option's</label>
-                    <select name="type" onChange={handleChange} value={values.type}>
+                    <select name="type" onChange={handleChange} value={values.type} required>
                     { props.types.map( (type) =>  <option key={type} value={type}>{type}</option>  )} 
                        
                     </select>
@@ -58,12 +59,12 @@ function ItemForm(props) {
 
                 <div>
                  <label htmlFor="amount">Amount</label>
-                 <input type="number" name="amount" step="1" onChange={handleChange} value={values.amount}/> 
+                 <input type="number" name="amount" step="1" onChange={handleChange} value={values.amount} required/> 
 
                 </div>    
                 <div>
                  <label htmlFor="startDate">Order Date</label>
-                 <input type="date" name="startDate" onChange={handleChange} value={values.startDate} /> 
+                 <input type="date" name="startDate" onChange={handleChange} value={values.startDate} required /> 
 
                 </div>               
              </div>    
