@@ -3,10 +3,25 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/app';
 import reportWebVitals from './reportWebVitals';
+import { FirebaseAppProvider }  from 'reactfire';
+
+
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyC1QCq9S1MxkyYiRX3B8gS-CTFuUPJop4Q",
+  authDomain: "global-vaccine-map.firebaseapp.com",
+  projectId: "global-vaccine-map",
+  storageBucket: "global-vaccine-map.appspot.com",
+  messagingSenderId: "279067061053",
+  appId: "1:279067061053:web:f460d67a6708d370ba7354",
+  measurementId: "G-EZTRXFEGWQ"
+};
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+      <App />
+    </FirebaseAppProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

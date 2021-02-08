@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { useFirestore, useFirestoreCollectionData }  from 'reactfire';
+import 'firebase/firestore';
 import styles from './app.module.scss';
 import Header from '../header';
 import Content from '../content';
@@ -10,49 +12,78 @@ import Additem from '../../routes/additem';
 import EditItem from '../../routes/edititem'
 import Menu from '../menu';
 import { ButtonAppcontainer } from '../../shared/uibuttons';
-import testdata from '../../testdata.js';
+ //import testdata from '../../testdata.js';
+
 function App() {
 
   const [data, setData ] = useState([]);
   const [typelist, setTypelist] = useState([]);
 
-  useEffect(() => {
-    setData(testdata);
-    setTypelist(["Moderna", "Oxford-AstraZeneca", "Pfize/BioNTech", "Novavax", "Sanofi/GSK"]);
-    }, []);
+  const itemCollectionRef = useFirestore().collection('item')
+  const {data: itemCollection } = useFirestoreCollectionData(itemCollectionRef.orderBy("startDate", "desc"), {initialData: [], idField: "id"});  
+
+  const typeCollectionRef = useFirestore().collection('type');
+  const { data: typeCollection } = useFirestoreCollectionData(typeCollectionRef.orderBy("type"), {initialData: []});
+
+
+
+   useEffect(() => {
+     setData(itemCollection)
+   }, [itemCollection]);
+
+   useEffect(() => {
+      const types = typeCollection.map(Obj => Obj.type);
+      setTypelist(types);
+   }, [typeCollection]);
+
 
  const handleItemSubmit = (newitem) => {
-   let storeddata = data.slice();
-   const index = storeddata.findIndex(item => item.id === newitem.id);
-   if (index >= 0 ) {
-     storeddata[index] = newitem;
-   } else {
-    storeddata.push(newitem);
-   }
 
 
- storeddata.sort( (a,b) => {
-  const aData = new Date (a.startDate);
-  const bData = new Date (b.startDate);
-  return bData.getTime() - aData.getTime();
+itemCollectionRef.doc(newitem.id).set(newitem);
 
-} );
 
-  setData(storeddata);
+            /*
+            let storeddata = data.slice();
+            const index = storeddata.findIndex(item => item.id === newitem.id);
+            if (index >= 0 ) {
+              storeddata[index] = newitem;
+            } else {
+              storeddata.push(newitem);
+            }
 
+
+          storeddata.sort( (a,b) => {
+            const aData = new Date (a.startDate);
+            const bData = new Date (b.startDate);
+            return bData.getTime() - aData.getTime();
+
+          } );
+
+            setData(storeddata);
+            */
  }
 
  const handleItemDelete = (id) => {
-  let storeddata = data.slice();
-  storeddata = storeddata.filter(item => item.id !== id )
-  setData(storeddata);
+   itemCollectionRef.doc(id).delete();
+
+          
+          /*
+          let storeddata = data.slice();
+          storeddata = storeddata.filter(item => item.id !== id )
+          setData(storeddata);
+          */
  }
 
  const handleTypeSubmit = (newtype) => {
-  let storedtypelist = typelist.slice();
-  storedtypelist.push(newtype);
-  storedtypelist.sort();
-  setTypelist(storedtypelist);
+   typeCollectionRef.doc().set({type: newtype});
+
+          /*
+          let storedtypelist = typelist.slice();
+          storedtypelist.push(newtype);
+          storedtypelist.sort();
+          setTypelist(storedtypelist);
+          */
  }
 
   return (
