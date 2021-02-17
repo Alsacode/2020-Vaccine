@@ -3,13 +3,15 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import { Link } from 'react-router-dom';
 
 function Item(props) {
+    // locale is the dateString for currency.
     const locale = "fi-FI";
     const startDate = new Date(props.data.startDate).toLocaleDateString(locale);
     const numberFormat = new Intl.NumberFormat(locale, {style: 'currency', currency: 'EUR'})
     const amount = numberFormat.format(props.data.amount);
-
+     
     let average;
     let order;
+    // when the order Date is getting in then the arrive Date must be working.
     if (props.data.orderDate && props.data.arriveDate) {
         const orderDate = new Date(props.data.orderDate);
         const arriveDate = new Date(props.data.arriveDate);

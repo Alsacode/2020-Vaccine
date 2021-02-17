@@ -12,14 +12,14 @@ import Additem from '../../routes/additem';
 import EditItem from '../../routes/edititem'
 import Menu from '../menu';
 import { ButtonAppcontainer } from '../../shared/uibuttons';
- //import testdata from '../../testdata.js';
+//import testdata from '../../testdata.js';
 
 function App() {
 
   const [data, setData ] = useState([]);
   const [typelist, setTypelist] = useState([]);
 
-  const itemCollectionRef = useFirestore().collection('item')
+  const itemCollectionRef = useFirestore().collection('item');
   const {data: itemCollection } = useFirestoreCollectionData(itemCollectionRef.orderBy("startDate", "desc"), {initialData: [], idField: "id"});  
 
   const typeCollectionRef = useFirestore().collection('type');
@@ -78,7 +78,7 @@ itemCollectionRef.doc(newitem.id).set(newitem);
  const handleTypeSubmit = (newtype) => {
    typeCollectionRef.doc().set({type: newtype});
 
-          /*
+         /* 
           let storedtypelist = typelist.slice();
           storedtypelist.push(newtype);
           storedtypelist.sort();

@@ -10,6 +10,7 @@ function Settings(props) {
         const newtype = event.target.elements.type.value;
         props.onTypeSubmit(newtype);
         event.target.elements.type.value = "";
+        
 
     }
 
