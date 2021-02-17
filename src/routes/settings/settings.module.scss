@@ -9,6 +9,23 @@
   margin-top: 0.5rem;  
 }
 
+.settings_profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.settings_user{
+    display: flex;
+    align-items: center;
+}
+
+.settings_user img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin: 1rem;
+}
+
 .settings_types {
     padding: 0.4rem;
     font-size: 1.2rem;

@@ -1,9 +1,17 @@
 import styles from './settings.module.scss';
 import Button from '../../shared/uibuttons';
-
+import { useUser, useAuth } from 'reactfire';
 
 
 function Settings(props) {
+
+    const user = useUser();
+    const auth = useAuth();
+
+
+    const signOut = async () => {
+        await auth.signOut();
+    }
 
     const handleTypeSubmit = (event) => {
         event.preventDefault();
@@ -17,7 +25,18 @@ function Settings(props) {
 
      return (
          <div className={styles.settings}>
-             <h2>World Vaccination Program</h2>
+             <h2>Covid-19 Vaccination Program</h2>
+             <h2>Profile</h2>
+
+            <div className={styles.settings_profile}>
+                <div className={styles.settings_user}>
+                    <div><img src={user.data.photoURL} alt="" /></div>
+                    <div>{user.data.displayName}<br/>{user.data.email}</div>
+                </div>
+                <div>
+                   <Button secondary onClick={signOut} >Sign Out</Button> 
+                </div>
+            </div>
              <h3>Vaccine Types</h3>
              <div className={styles.settings_types}>
                  {props.types.map((type) => <div key={type}>{type}</div>)}

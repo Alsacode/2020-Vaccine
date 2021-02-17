@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/app';
 import reportWebVitals from './reportWebVitals';
-import { FirebaseAppProvider }  from 'reactfire';
+import { FirebaseAppProvider, AuthCheck }  from 'reactfire';
+import StartUp from './components/startup';
 
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -20,7 +21,9 @@ const firebaseConfig = {
 ReactDOM.render(
   <React.StrictMode>
     <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+      <AuthCheck fallback={<StartUp />}>
       <App />
+      </AuthCheck>
     </FirebaseAppProvider>
   </React.StrictMode>,
   document.getElementById('root')
