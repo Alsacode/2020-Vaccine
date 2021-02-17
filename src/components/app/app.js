@@ -28,7 +28,7 @@ function App() {
 
 
    useEffect(() => {
-     setData(itemCollection)
+     setData(itemCollection);
    }, [itemCollection]);
 
    useEffect(() => {

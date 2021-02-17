@@ -18,7 +18,7 @@ import { v4 as uuidv4 } from 'uuid';
  }
 
  const initialState = props.data ? props.data : { 
-     type: props.types ? props.types[0] : "",
+     type: props.types ? props.types[0] : "" ,
      amount: 0,
      startDate: new Date().toISOString().substring(0,10),
      orderDate: "",
@@ -59,7 +59,7 @@ import { v4 as uuidv4 } from 'uuid';
 
                 <div>
                  <label htmlFor="amount">Amount</label>
-                 <input type="number" name="amount" step="1" onChange={handleChange} value={values.amount} required/> 
+                 <input type="number" name="amount" step="0.01" onChange={handleChange} value={values.amount} /> 
 
                 </div>    
                 <div>

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 
-const useForm = (callback, initialState={}, resetOnSubmit=true) => {
+const useForm = (callback, initialState={}, reset=true) => {
 
 
     // Presenting new useState-hook, for using form.
@@ -15,7 +15,7 @@ const useForm = (callback, initialState={}, resetOnSubmit=true) => {
             event.preventDefault();
         }
         callback();
-        if (resetOnSubmit) resetValues();
+        if (reset) resetValues();
     }
     
     // Every info will get to the fill it will be saved by the value what is defiend.

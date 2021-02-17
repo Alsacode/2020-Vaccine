@@ -6,7 +6,7 @@ import Button from '../../shared/uibuttons';
 function Settings(props) {
 
     const handleTypeSubmit = (event) => {
-        event.prevenDefault();
+        event.preventDefault();
         const newtype = event.target.elements.type.value;
         props.onTypeSubmit(newtype);
         event.target.elements.type.value = "";

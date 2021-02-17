@@ -20,7 +20,7 @@ function Item(props) {
         average = numberFormat.format(props.data.amount / days * 30);
     }
 
-    return (
+    return ( 
     <div className={styles.item}>
         <div className={styles.item_data}>
             <div className={styles.item_type}>{props.data.type}</div>
