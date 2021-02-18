@@ -16,15 +16,15 @@ import { ButtonAppcontainer } from '../../shared/uibuttons';
 //import testdata from '../../testdata.js';
 
 function App() {
-
+   // we are defing the data with useState for tranform informtion forward.
   const [data, setData ] = useState([]);
   const [typelist, setTypelist] = useState([]);
 
   const user = useUser();
-
+    // user and item is getting the data throw collection by document. Idfiel is the id-key
   const itemCollectionRef = useFirestore().collection('user').doc(user.data.uid).collection('item');
   const {data: itemCollection } = useFirestoreCollectionData(itemCollectionRef.orderBy("startDate", "desc"), {initialData: [], idField: "id"});  
-
+   // types getting throw user and type by data is tranforming the data forward.
   const typeCollectionRef = useFirestore().collection('user').doc(user.data.uid).collection('type');
   const { data: typeCollection } = useFirestoreCollectionData(typeCollectionRef.orderBy("type"), {initialData: []});
 
