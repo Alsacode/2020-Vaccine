@@ -59,7 +59,7 @@ import { v4 as uuidv4 } from 'uuid';
 
                 <div>
                  <label htmlFor="amount">Amount</label>
-                 <input type="number" name="amount" step="0.01" onChange={handleChange} value={values.amount} /> 
+                 <input type="number" name="amount" step="0.01" onChange={handleChange} value={values.amount} required /> 
 
                 </div>    
                 <div>
@@ -86,7 +86,7 @@ import { v4 as uuidv4 } from 'uuid';
 
                 <div>
                  <label htmlFor="receiver">Receiver</label>
-                 <input type="text" name="receiver" onChange={handleChange} value={values.receiver} /> 
+                 <input type="text" name="receiver" onChange={handleChange} value={values.receiver} required /> 
 
                 </div>                 
              </div>    
