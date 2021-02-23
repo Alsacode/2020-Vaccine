@@ -27,17 +27,17 @@
 
 
 .uibuttons--primary:hover {
-    background-color:  	  #ffe8e8;
+    background-color:  	  #ffb5b5;
 }
 
 
 .uibuttons--secondary {
-    background-color:    #b2cc80;
+    background-color:    #051283;
 }
 
 
 .uibuttons--secondary:hover {
-  background-color:     #d9d90f;
+  background-color:     #04ff4288;
 }
 
 .uibuttons:disabled {

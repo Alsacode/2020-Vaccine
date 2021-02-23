@@ -58,12 +58,12 @@ import { v4 as uuidv4 } from 'uuid';
          <div className={styles.form_row}>
 
                 <div>
-                 <label htmlFor="amount">Amount</label>
+                 <label className="label__option" htmlFor="amount">Amount</label>
                  <input type="number" name="amount" step="0.01" onChange={handleChange} value={values.amount} required /> 
 
                 </div>    
                 <div>
-                 <label htmlFor="startDate">Order Date</label>
+                 <label className="label__option" htmlFor="startDate">Delivery Date</label>
                  <input type="date" name="startDate" onChange={handleChange} value={values.startDate} required /> 
 
                 </div>               
@@ -71,12 +71,12 @@ import { v4 as uuidv4 } from 'uuid';
                <div className={styles.form_row}>
 
                 <div>
-                 <label htmlFor="orderDate">Delivery Date</label>
+                 <label className="label__option" htmlFor="orderDate">Order Date</label>
                  <input type="date" name="orderDate" onChange={handleChange} value={values.orderDate}  /> 
 
                 </div>    
                 <div>
-                 <label htmlFor="arriveDate">Arrive Date</label>
+                 <label className="label__option" htmlFor="arriveDate">Arrive Date</label>
                  <input type="date" name="arriveDate" onChange={handleChange} value={values.arriveDate}/> 
 
                 </div>               
@@ -106,7 +106,7 @@ import { v4 as uuidv4 } from 'uuid';
              {props.onItemDelete ? 
                <div className={styles.form_row}>
                 <div>
-                     <Button primary  onClick={handleDelete}>Remove</Button>
+                     <Button secondary  onClick={handleDelete}>Remove</Button>
                        </div>
                     <div></div>
                  </div> : "" }

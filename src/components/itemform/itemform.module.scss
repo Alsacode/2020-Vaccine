@@ -1,12 +1,14 @@
 @import '../../assets/styles/_config.scss';
 
 .form {
+   
     display: flex;
     flex-direction: column;
 }
 
 .form_row {
     display: flex;
+   
 }
 
 .form_row > div {
@@ -18,6 +20,7 @@
 }
 
 .form input, .form select {
+    
     padding: $form-item-padding;
     border: 1px solid $form-input-border;
     border-radius: $form-item-radius;
@@ -25,9 +28,8 @@
     outline: none;
 }
 
-
 .form label {
+   background: linear-gradient(45deg, #e2dbdb 10%, #6ab9fa 90%);
    font-size: $form-label-fontsize;
    margin-bottom: $form-label-margin-bottom;
-
 }
