@@ -1,5 +1,5 @@
 import styles from './stats.module.scss';
-import { Line, LineChart, XAxis, YAxis, ResponsiveContainer, Label, CartesianGrid, Tooltip, Pie, PieChart, LabelList, Legend, Cell } from 'recharts';
+import { Line, LineChart,  XAxis, YAxis, ResponsiveContainer, Label, CartesianGrid, Tooltip, Pie, PieChart, LabelList, Legend, Cell} from 'recharts';
 import randomColor from 'randomcolor';
 function Stats(props) {
 
@@ -22,10 +22,17 @@ function Stats(props) {
         <div className={styles.stats}>
             <h2>Stats</h2>
             <h3>expenses schedule</h3>
+            
             <ResponsiveContainer width={"100%"} height={360}>
-                <LineChart data={linedata} margin={{top:20, left:30, right:30, bottom:10}} >
+                <LineChart  width={500}
+                       height={400}  data={linedata}  margin={{
+                        top: 0,
+                        right: 0,
+                        left: 15,
+                        bottom: 0, 
+                      }} >
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis type="number"
+                    <XAxis  type="number" 
                     dataKey="date"
                     domain={["dataMin", "dataMax"]} 
                     scale="time" 
@@ -37,10 +44,12 @@ function Stats(props) {
                                 angle={-90}
                                 style={{ textAnchor: "middle"}} />
                     </YAxis>
-                    <Line dataKey="amount" name="amount" unit="€"  />
+                    <Line dataKey="amount" name="amount" unit="€" fill="#8884d8"  />
                     <Tooltip labelFormatter={value => new Date(value).toLocaleDateString("fi-FI")} />
+                   
                 </LineChart>
             </ResponsiveContainer>
+          
 
             <h3>expenses of vaccines</h3>
 
