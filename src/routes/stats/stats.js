@@ -20,7 +20,7 @@ function Stats(props) {
 
     return (
         <div className={styles.stats}>
-            <h2>Stats</h2>
+           
             <h3>expenses schedule</h3>
             
             <ResponsiveContainer width={"100%"} height={360}>

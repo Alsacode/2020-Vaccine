@@ -43,3 +43,10 @@
 .item:hover .item_edit {
     display: flex;
 }
+
+
+@media(max-width: 375px) {
+   .item  {
+           font-size: 0.9rem;
+    }
+}

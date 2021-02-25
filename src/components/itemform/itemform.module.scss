@@ -28,8 +28,16 @@
     outline: none;
 }
 
+
 .form label {
    background: linear-gradient(45deg, #e2dbdb 10%, #6ab9fa 90%);
    font-size: $form-label-fontsize;
    margin-bottom: $form-label-margin-bottom;
 }
+
+@media(max-width: 532px) {
+    .form input  {
+        font-size: 0.9rem;
+    }
+}
+

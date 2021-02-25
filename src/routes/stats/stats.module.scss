@@ -2,6 +2,7 @@
 
 
 .stats {
+    
     font-family:Arial, Helvetica, sans-serif;
     font-size: 20px;
     color: #fff;
@@ -9,7 +10,30 @@
     background: linear-gradient(45deg, #615c5c 10%, #1c3f5c 90%);
 }
 
+.stats h3 {
+    margin-top: 20px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;   
+    color: rgb(255, 255, 255);
+}
+
+.stats h3:hover {
+    border: 3px solid #fb0404;
+    border-radius: 30px 0 30px 0;
+    background-color: rgb(98, 98, 98);
+    transition: 0.2s ease-in-out;
+}
+.stats h3:active{
+    border: 2px solid #fb0404;
+    border-radius: 0 30px 0 30px;
+    background-color: rgb(42, 41, 41);
+    transition: 0.2s ease-in-out;
+
+}
 
 .stats h3 {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 }

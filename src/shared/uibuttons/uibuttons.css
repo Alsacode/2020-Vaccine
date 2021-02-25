@@ -65,3 +65,10 @@
 .uibutton__appcontainer > div {
     transform: translateZ(0);
 }
+
+
+@media(max-width: 532px) {
+    .uibuttons  {
+        font-size: 0.8rem;
+    }
+}

@@ -9,5 +9,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 16px 0 16px 0;
+   
+    text-transform: uppercase;
+}
+.header:hover {
+    color: rgb(5, 53, 131);
+}
+
+@media(max-width: 375px) {
+    .header {
+       font-size: 1.2rem;
+    }
 }
