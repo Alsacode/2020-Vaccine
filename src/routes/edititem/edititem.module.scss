@@ -25,8 +25,8 @@
 }
 .edititem h2:active{
     border: 2px solid #fb0404;
-    border-radius: 30px 0 30px 0;
-    background-color: rgb(246, 209, 209);
+    border-radius: 0 30px 0 30px;
+    background-color: rgb(54, 54, 54);
     transition: 0.2s ease-in-out;
 
 }
