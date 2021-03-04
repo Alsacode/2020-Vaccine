@@ -12,6 +12,7 @@ import Settings from '../../routes/settings';
 import Additem from '../../routes/additem';
 import EditItem from '../../routes/edititem'
 import Menu from '../menu';
+import Covid19 from '../globalMap/Covid19';
 import { ButtonAppcontainer } from '../../shared/uibuttons';
 //import testdata from '../../testdata.js';
 
@@ -103,6 +104,9 @@ itemCollectionRef.doc(newitem.id).set(newitem);
            </Route>
            <Route path="/settings">
              <Settings types={typelist} onTypeSubmit={handleTypeSubmit} />
+           </Route>
+           <Route path="/globalMap">
+             <Covid19 />
            </Route>
            <Route path="/add">
              <Additem onItemSubmit={handleItemSubmit} types={typelist} />

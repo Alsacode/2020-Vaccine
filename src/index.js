@@ -5,6 +5,7 @@ import App from './components/app';
 import reportWebVitals from './reportWebVitals';
 import { FirebaseAppProvider, AuthCheck }  from 'reactfire';
 import StartUp from './components/startup';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
