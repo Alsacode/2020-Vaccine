@@ -1,5 +1,6 @@
 import React from 'react';
-
+// If there is no Data then the web will be on the loading mode.
+// Defined by bootstrap
 const Loading = () => {
     return (  
         <div 

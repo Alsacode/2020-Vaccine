@@ -1,0 +1,5 @@
+ /* The container background of the map   */
+
+.leaflet-container {
+   background: linear-gradient(45deg, #49D49D 10%, #A2C7E5 90%);
+}
