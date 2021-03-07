@@ -14,6 +14,8 @@ import EditItem from '../../routes/edititem'
 import Menu from '../menu';
 import Covid19 from '../globalMap/Covid19';
 import { ButtonAppcontainer } from '../../shared/uibuttons';
+import Covid from '../../numberCases/Covid';
+
 //import testdata from '../../testdata.js';
 
 function App() {
@@ -107,6 +109,9 @@ itemCollectionRef.doc(newitem.id).set(newitem);
            </Route>
            <Route path="/globalMap">
              <Covid19 />
+           </Route>
+           <Route path="/numberCases">
+             <Covid />
            </Route>
            <Route path="/add">
              <Additem onItemSubmit={handleItemSubmit} types={typelist} />

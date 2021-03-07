@@ -21,7 +21,7 @@ class LoadCountriesTask{
              this.#processCovidData(result.data),
         });  
     }
-    //  #processCovidData is privet for covidCounttries and using for statment so it will defind mapCountry.
+    //  #processCovidData is privet for covidCounttries and using Loop  so it will defind mapCountry.
     // Using find() so we can get data from covidCountry with using ISO3 is Alpha-3 code if is equal to mapCountry and inside there is properties.
     #processCovidData = (covidCountries) => {
      for(let i=0; i < this.mapCountries.length; i++) {
@@ -34,6 +34,7 @@ class LoadCountriesTask{
          if(covidCountry != null) {
              const confirmed = Number( covidCountry.Confirmed);
              mapCountry.properties.confirmed = confirmed;
+             // using mapCountry and to the properties with confirmed casess by using  Format a number with commas
              mapCountry.properties.confirmedText =this.#formatNumberWithCommas(
              confirmed
              );
@@ -54,7 +55,8 @@ class LoadCountriesTask{
         }
 
     };
-    // here is also regular expression code a number to be privte there is this kind of regular expression in google.
+    // here is also regular expression code a number to be privte there is this kind of regular expression in google. 
+    // // Format a number with commas
     #formatNumberWithCommas = (number) => {
         return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
