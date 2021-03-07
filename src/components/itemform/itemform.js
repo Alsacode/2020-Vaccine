@@ -63,7 +63,7 @@ import { v4 as uuidv4 } from 'uuid';
 
                 </div>    
                 <div>
-                 <label className="label__option" htmlFor="startDate">Delivery Date</label>
+                 <label className="label__option" htmlFor="startDate">Order Date</label>
                  <input type="date" name="startDate" onChange={handleChange} value={values.startDate} required /> 
 
                 </div>               
@@ -71,7 +71,7 @@ import { v4 as uuidv4 } from 'uuid';
                <div className={styles.form_row}>
 
                 <div>
-                 <label className="label__option" htmlFor="orderDate">Order Date</label>
+                 <label className="label__option" htmlFor="orderDate">Delivery Date</label>
                  <input type="date" name="orderDate" onChange={handleChange} value={values.orderDate}  /> 
 
                 </div>    
