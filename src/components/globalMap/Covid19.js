@@ -4,6 +4,7 @@ import CovidMap from "./CovidMap";
 import Legend from "./Legend";
 import LoadCountriesTask from "../../tasks/LoadCountriesTask";
 import legendItems from "../../entities/Legenditems";
+import InfoCovid from "./InfoCovid";
 
 const Covid19 = () => {
        // this component is countries for useState so can get the countries from legendItems by using reverse function.
@@ -27,6 +28,7 @@ const Covid19 = () => {
              { /* If there is data what is coming from countries it will use CovidMap component and it will also go through loading and countries. */}
              <Legend legendItems={legendItemsInReverse} /></div>)}
              { /* For confirming the cases it will also get the data from legendItems then it will go through legendItemsInReverse */}
+                <InfoCovid />
         </div>
      );
 }
