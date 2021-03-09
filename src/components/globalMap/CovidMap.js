@@ -29,11 +29,13 @@ const CovidMap = ({ countries }) => {
        // MapContiner is the hole Map on the web.
        // GeoJSON is the contries shape inside the Map.
     return ( 
+        <div><h2 className="header">Coronavirus World Map:</h2>
          <MapContainer style={{ height: "60vh" }} zoom={2} center={[30, 80]}>
             <GeoJSON style={mapStyle}
              data={countries}
               onEachFeature={onEachCountry} />
          </MapContainer>
+         </div>
      );
 }
  

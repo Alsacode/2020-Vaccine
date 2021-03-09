@@ -10,18 +10,26 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    letter-spacing: 0.0375rem;
 }
 
 .info a {
     font-size: 1.1rem;
     margin: 2.5rem;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    
 }
 
 footer {
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
-    color: rgb(255, 0, 0);
+  font-size: 0.95rem;
+  color: #ff9705;
+  font-style: italic;
+  padding:0;
+  text-align:center;
+  line-height:1.6;
+  margin-bottom:0;
 }
+
+
