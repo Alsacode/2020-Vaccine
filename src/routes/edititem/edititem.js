@@ -13,7 +13,7 @@ function EditItem(props) {
 
     return (
         <div className={styles.edititem}>
-            <h2>Checkout your informastion</h2>
+            <h2>Checkout your Orders </h2>
             <ItemForm onItemSubmit={props.onItemSubmit} data={item} types={props.types} onItemDelete={props.onItemDelete} />
         </div>
     );
