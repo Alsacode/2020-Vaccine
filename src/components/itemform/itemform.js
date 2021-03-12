@@ -3,6 +3,10 @@ import Button from '../../shared/uibuttons';
 import useForm from '../../shared/useform';
 import { useHistory } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
+import CancelIcon from '@material-ui/icons/Cancel';
+import RemoveCircleOutlineIcon from '@material-ui/icons/RemoveCircleOutline';
+import HomeIcon from '@material-ui/icons/Home';
 
  function ItemForm(props) {
 
@@ -93,11 +97,11 @@ import { v4 as uuidv4 } from 'uuid';
             
              <div className={styles.form_row}>
                 <div>
-                    <Button primary  onClick={handleCancel}>CANCEL</Button>
+                    <Button  onClick={handleCancel}><CancelIcon/></Button>
 
                 </div>
                 <div>
-                    <Button primary type="submit">{ props.data ? "SAVE" : "ADD"}</Button>
+                    <Button  type="submit"> <AddCircleOutlineIcon>{ props.data ? "SAVE" : "ADD"}</AddCircleOutlineIcon></Button>
 
                 </div>
              </div>
@@ -106,12 +110,15 @@ import { v4 as uuidv4 } from 'uuid';
              {props.onItemDelete ? 
                <div className={styles.form_row}>
                 <div>
-                     <Button secondary  onClick={handleDelete}>Remove</Button>
+                     <Button  onClick={handleDelete}><RemoveCircleOutlineIcon/></Button>
                        </div>
-                    <div></div>
-                 </div> : "" }
-
-
+                       <div>
+                           {/* The home button haven't yet defined just for show.  */}
+                            <Button  onClick={handleCancel}><HomeIcon/></Button>
+                        </div>
+                    
+                 </div> : "" }          
+                        
                 </div>    
            </form>
          </div>

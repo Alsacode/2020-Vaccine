@@ -2,9 +2,21 @@
 
 
 .edititem {
-   
-    padding: $container-padding;
+    width: 100%;
+    position: fixed;
+    
     background: linear-gradient(45deg, #49D49D 10%, #A2C7E5 90%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+@media(max-width: 450px){
+    .edititem {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+       
+       
+    }
 }
 
 .edititem h2 {
@@ -15,6 +27,7 @@
     text-align: center;
     text-transform: uppercase;   
     color: rgb(255, 255, 255);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .edititem h2:hover {
@@ -22,17 +35,15 @@
     border-radius: 30px 0 30px 0;
     background-color: #aaa;
     transition: 0.2s ease-in-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 .edititem h2:active{
     border: 2px solid #fb0404;
     border-radius: 0 30px 0 30px;
     background-color: rgb(54, 54, 54);
     transition: 0.2s ease-in-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
 }
-@media(max-width: 360px){
-    .edititem {
-        font-size: 1.2rem;
-    }
-}
+
 

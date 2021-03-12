@@ -1,7 +1,7 @@
 import styles from './settings.module.scss';
 import Button from '../../shared/uibuttons';
 import { useUser, useAuth } from 'reactfire';
-
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 function Settings(props) {
 
@@ -25,8 +25,8 @@ function Settings(props) {
 
      return (
          <div className={styles.settings}>
-             <h2>Covid-19 Vaccination Program</h2>
-             <h2>Profile</h2>
+             <h2 className="header-profile">Covid-19 Vaccination Program</h2>
+             <h3 className="profile">Profile</h3>
 
             <div className={styles.settings_profile}>
                 <div className={styles.settings_user}>
@@ -34,7 +34,7 @@ function Settings(props) {
                     <div>{user.data.displayName}<br/>{user.data.email}</div>
                 </div>
                 <div>
-                   <Button secondary onClick={signOut} >Sign Out</Button> 
+                   <Button onClick={signOut} ><ExitToAppIcon></ExitToAppIcon></Button> 
                 </div>
             </div>
              <h3>Vaccine Types</h3>
@@ -43,10 +43,10 @@ function Settings(props) {
                  <form onSubmit={handleTypeSubmit}>
                    <div className={styles.typeform}>
                     <input type="text" name="type" />
-                    <Button type="submit" primary>ADD</Button> 
+                    <Button type="submit" >Add vaccine's</Button> 
                     </div>  
                  </form>
-                 <h4><strong>Is the COVID-19 vaccine safe? What do we know about its safety?</strong></h4>
+                 <h4><strong>IS The COVID-19 vaccine safe? What do we know about its safety?</strong></h4>
               
                  <p>The U.S. vaccine safety system works to make sure that all vaccines are as safe as possible.
                     Safety has been a top priority as federal agencies work with vaccine manufacturers to develop 

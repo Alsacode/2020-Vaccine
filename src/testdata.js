@@ -3,18 +3,18 @@ const data = [
       id:        "1",
       type:      "vaccine (COVID-19)",
       amount:    "53",
-      startDate: "2020-03-01",
-      orderDate: "2020-11-18",
-      arriveDate: "2021-2-02",
+      startDate: "",
+      orderDate: "",
+      arriveDate: "",
       receiver:   "Moderna"
     },
     {
       id:        "2",
       type:      "vaccine (COVID-19) ",
       amount:    "45",
-      startDate: "2020-3-01",
-      orderDate: "2020-11-18",
-      arriveDate: "2021-1-21",
+      startDate: "",
+      orderDate: "",
+      arriveDate: "",
       receiver:   "Oxford-AstraZeneca"
       },
 
@@ -22,9 +22,9 @@ const data = [
         id:        "3",
         type:      "vaccine (COVID-19) ",
         amount:    "85",
-        startDate: "2020-3-01",
-        orderDate: "2020-11-18",
-        arriveDate: "2021-1-28",
+        startDate: "",
+        orderDate: "",
+        arriveDate: "",
         receiver:   "Pfize/BioNTech"
       },
       
@@ -32,18 +32,18 @@ const data = [
         id:        "4",
         type:      "vaccine (COVID-19) ",
         amount:    "23",
-        startDate: "2020-3-01",
-        orderDate: "2020-12-16",
-        arriveDate: "2021-3-06",
+        startDate: "",
+        orderDate: "",
+        arriveDate: "",
         receiver:  "Novavax"
       },
       {
         id:        "5",
         type:      "vaccine (COVID-19)",
         amount:    "95",
-        startDate: "2020-3-01",
-        orderDate: "2020-11-18",
-        arriveDate: "2021-4-25",
+        startDate: "",
+        orderDate: "",
+        arriveDate: "",
         receiver:  "Sanofi/GSK"
       },
 

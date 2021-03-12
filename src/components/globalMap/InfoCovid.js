@@ -68,8 +68,8 @@ const InfoCovid = () => {
              
 
                <div className="text-center p-3" >
-                  © 2021 Copyright:
-                  <a className="text-dark" href="https://global-vaccine-map.web.app/">Global-Vaccine-Map</a>
+                 <span> © 2021 Copyright:</span>
+                  <a className="link-footer" href="https://global-vaccine-map.web.app/">Global-Vaccine-Map</a>
                </div>
               
                </footer> 

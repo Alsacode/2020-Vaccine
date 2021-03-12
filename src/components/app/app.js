@@ -31,7 +31,13 @@ function App() {
   const typeCollectionRef = useFirestore().collection('user').doc(user.data.uid).collection('type');
   const { data: typeCollection } = useFirestoreCollectionData(typeCollectionRef.orderBy("type"), {initialData: []});
 
-
+  // handleing the deleting all data what ever you have been saving in your account.
+  const handleDeleteAll = async () =>{
+      const lines = await itemCollectionRef.get();
+      lines.forEach((element) => {
+        element.ref.delete();
+      })
+  }
 
    useEffect(() => {
      setData(itemCollection);
@@ -99,7 +105,7 @@ itemCollectionRef.doc(newitem.id).set(newitem);
        <Header />
           <Content>
            <Route exact path="/">
-             <Items data={data} />
+             <Items data={data} typelist={typelist} onDeleteAll={handleDeleteAll} />
            </Route>
            <Route path="/stats">
              <Stats data={data}/>

@@ -2,9 +2,11 @@
 
 
 .item {
+    width: 100%;
     display: flex;
     border-bottom:  1px solid  $item-border;
     color: $item-text;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 
@@ -13,10 +15,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: $item-padding;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .item_amount, .item_averagePrice, .item_orderDate {
     text-align: right;
+   
+    
 }
 
 .item_date, .item_type, .item_amount {
@@ -32,12 +37,14 @@
     display: none;
     justify-content: center;
     align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 
 }
 
 
 .item_edit a {
     color: $item-edit-text;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .item:hover .item_edit {

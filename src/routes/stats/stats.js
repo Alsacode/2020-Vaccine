@@ -53,7 +53,7 @@ function Stats(props) {
 
             <h3>expenses of vaccines</h3>
 
-            <ResponsiveContainer width={"100%"} height={360}>
+            <ResponsiveContainer width={"100%"} height={700}>
                 <PieChart>
                     <Pie data={piedata} dataKey="amount" nameKey="type">
                        <LabelList dataKey="amount" position="inside" /> 

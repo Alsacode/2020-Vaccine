@@ -1,6 +1,7 @@
 .info{
   font-family:Arial, Helvetica, sans-serif;
   font-weight: 500;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .info h5 {
@@ -11,14 +12,19 @@
     align-items: center;
     text-align: center;
     letter-spacing: 0.0375rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .info a {
     font-size: 1.1rem;
-    margin: 2.5rem;
+   
     justify-content: center;
     text-align: center;
+    align-items: center;
+    display: flex;
     text-transform: uppercase;
+    
+    
     
 }
 
@@ -30,6 +36,18 @@ footer {
   text-align:center;
   line-height:1.6;
   margin-bottom:0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+span  {
+  color: rgb(0, 5, 5);
+  border: 2px solid #ff9705;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 10px;
+}
+
+ div > a {
+   color: #ff9705;
 }
 
 

@@ -1,43 +1,92 @@
 @import '../../assets/styles/_config.scss';
 
 .form {
-   
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    position: relative;    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+ 
+.form_row {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    margin: 0 auto;
+   
+    
 }
 
-.form_row {
-    display: flex;
-   
-}
+
 
 .form_row > div {
+    
+    padding: 0;
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
     width: 100%;
-    margin: $form-item-margin;
+    margin: 0 auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
+ 
+@media(max-width: 413px) {
+     input  {
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+        
+    }
+}
+ 
+
+
 
 .form input, .form select {
-    
+    margin: 0;
+    display: flex;
+    width: 100%;
     padding: $form-item-padding;
     border: 1px solid $form-input-border;
     border-radius: $form-item-radius;
     font-size: $form-item-fontsize;
     outline: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
+@media(max-width: 565px) {
+    .form input  {
+        font-size: 1rem;
+        display: flex;
+        width: 100%;
+        padding: 0 auto;
+       position: relative;
+    }
 }
 
 
 .form label {
+   
+    margin:  0 auto;
+    position: relative;
+   width: 100%;
    background: linear-gradient(45deg, #e2dbdb 10%, #6ab9fa 90%);
    font-size: $form-label-fontsize;
-   margin-bottom: $form-label-margin-bottom;
+   
+   
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
-@media(max-width: 532px) {
-    .form input  {
-        font-size: 0.9rem;
+
+@media(max-width:365px) {
+   .form label {
+       width: 100%;
+        display: flex;
+        font-size: 0.8rem;
+        position: relative;
     }
 }
 

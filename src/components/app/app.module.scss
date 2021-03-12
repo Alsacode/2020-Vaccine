@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,600&display=swap');
 
 .app {
+   
    font-family: 'Nunito', sans-serif;
    max-width: 38rem;
    margin: 0 auto;
@@ -8,6 +9,7 @@
    flex-direction: column;
    height: 100vh;
    background: linear-gradient(45deg, #f6f6f6 10%, #6ab9fa 90%);
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .app > * {

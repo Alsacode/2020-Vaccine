@@ -1,56 +1,102 @@
 @import '../../assets/styles/_config.scss';
 
+/* body */
 
+*{
+    margin: 0;
+    padding: 0;
+}
 .settings {
     padding: $container-padding;
     background: linear-gradient(60deg, #82d3b2 15%, #70d3f1 90%);
 }
 
 .settings h3 {
-  margin-top: 0.5rem;  
+    width: auto;
+    height: 40px; 
+  margin-top: 0.5rem;
+  font-weight: 600;
+  border-radius: 10px;
+  color: #f0200d;  
 }
 
+.settings h2 {
+    width: auto;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 10px;
+}
 .settings_profile{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
+    width: auto;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 .settings_user{
     display: flex;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f0200d;
 }
 
 .settings_user img {
-    width: 5rem;
+    width: auto;
     height: 5rem;
     border-radius: 50%;
-    margin: 1rem;
+    margin: 0.5rem;
+    
+    
 }
 
 .settings_types {
     padding: 0.4rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .settings_types > div {
     padding: 0.3rem;
     border-radius: 0.3rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .settings_types > div:nth-child(odd) {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+h4  {
+    padding: 1rem;
+    justify-content: center;
+    text-align: center;
+}
 
+  p {
+      padding: 8px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 200;
+  }
 .settings p strong {
     color: rgb(0, 0, 0);
+    
 }
+
 
 .settings p {
     width: auto;
     font-size: 17px;
     font-family: Arial, Helvetica, sans-serif;
     text-transform: none;
+    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
    
 
 }
@@ -76,4 +122,5 @@
     border-radius: $form-item-radius;
     font-size: 1em;
     outline: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
