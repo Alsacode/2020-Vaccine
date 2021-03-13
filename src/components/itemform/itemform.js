@@ -54,7 +54,7 @@ import HomeIcon from '@material-ui/icons/Home';
 
                     <label htmlFor="type">Vaccine option's</label>
                     <select name="type" onChange={handleChange} value={values.type} required>
-                    { props.types.map( (type) =>  <option key={type} value={type}>{type}</option>  )} 
+                    { props.types.map((type) =>  <option key={type} value={type}>{type}</option>  )} 
                        
                     </select>
                 </div>
