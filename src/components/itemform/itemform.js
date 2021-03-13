@@ -3,7 +3,7 @@ import Button from '../../shared/uibuttons';
 import useForm from '../../shared/useform';
 import { useHistory } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
-import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
+import SaveIcon from '@material-ui/icons/Save';
 import CancelIcon from '@material-ui/icons/Cancel';
 import RemoveCircleOutlineIcon from '@material-ui/icons/RemoveCircleOutline';
 import HomeIcon from '@material-ui/icons/Home';
@@ -101,7 +101,7 @@ import HomeIcon from '@material-ui/icons/Home';
 
                 </div>
                 <div>
-                    <Button  type="submit"> <AddCircleOutlineIcon>{ props.data ? "SAVE" : "ADD"}</AddCircleOutlineIcon></Button>
+                    <Button  type="submit"> < SaveIcon>{ props.data ? "SAVE" : "ADD"}</ SaveIcon></Button>
 
                 </div>
              </div>
